@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:yappingtime/auth/authService.dart';
 import 'package:yappingtime/components/myButton.dart';
 import 'package:yappingtime/components/myTextfield.dart';
 
@@ -10,8 +11,22 @@ class LoginPage extends StatelessWidget {
 
   LoginPage({super.key, required this.onTap});
 
-  void login() {
- 
+  void login(BuildContext context) async {
+    final authService = AuthService();
+
+    try {
+      await authService.signInWithEmailAndPassword(
+        emailController.text,
+        passwordController.text,
+      );
+    } catch (e) {
+     showDialog(
+      context: context, 
+      builder: (context) => AlertDialog(
+        title: Text(e.toString()),
+        ),
+     );
+    }
   }
 
   @override
@@ -50,7 +65,7 @@ class LoginPage extends StatelessWidget {
             SizedBox(height: 25),
             MyButton(
               text: "Login",
-              onTap: login,
+              onTap: () => login(context),
             ),
             SizedBox(height: 25),
             Row(
