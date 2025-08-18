@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:yappingtime/auth/authService.dart';
-import 'package:yappingtime/components/settingsPage.dart';
+import 'package:yappingtime/pages/settingsPage.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
