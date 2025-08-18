@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:yappingtime/auth/authService.dart';
-import 'package:yappingtime/pages/settingsPage.dart';
+import 'package:yappingtime/auth/auth_service.dart';
+import 'package:yappingtime/pages/settings_page.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
@@ -13,7 +13,7 @@ class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

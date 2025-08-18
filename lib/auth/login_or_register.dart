@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:yappingtime/pages/loginPage.dart';
-import 'package:yappingtime/pages/registerPage.dart';
+import 'package:yappingtime/pages/login_page.dart';
+import 'package:yappingtime/pages/register_page.dart';
 
 class LoginOrRegisterPage extends StatefulWidget {
   const LoginOrRegisterPage({super.key});

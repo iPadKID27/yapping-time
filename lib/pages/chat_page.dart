@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:yappingtime/auth/authService.dart';
-import 'package:yappingtime/components/myTextfield.dart';
-import 'package:yappingtime/services/chat/chatService.dart';
+import 'package:yappingtime/auth/auth_service.dart';
+import 'package:yappingtime/components/my_textfield.dart';
+import 'package:yappingtime/services/chat/chat_service.dart';
 
 class ChatPage extends StatelessWidget {
   final String receiverEmail;

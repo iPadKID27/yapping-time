@@ -1,8 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:yappingtime/auth/authGate.dart';
+import 'package:yappingtime/auth/auth_gate.dart';
 import 'package:yappingtime/firebase_options.dart';
-import 'package:yappingtime/themes/lightMode.dart';
+import 'package:yappingtime/themes/light_mode.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();

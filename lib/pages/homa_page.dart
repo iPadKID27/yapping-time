@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:yappingtime/auth/authService.dart';
-import 'package:yappingtime/components/myDrawer.dart';
-import 'package:yappingtime/components/userTile.dart';
-import 'package:yappingtime/pages/chatPage.dart';
-import 'package:yappingtime/services/chat/chatService.dart';
+import 'package:yappingtime/auth/auth_service.dart';
+import 'package:yappingtime/components/my_drawer.dart';
+import 'package:yappingtime/components/user_tile.dart';
+import 'package:yappingtime/pages/chat_page.dart';
+import 'package:yappingtime/services/chat/chat_service.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
