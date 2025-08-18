@@ -43,14 +43,17 @@ class HomePage extends StatelessWidget {
     Map<String, dynamic> userData,
     BuildContext context,
   ) {
-   if (userData['email'] != authService.getCurrentUser()) {
+   if (userData['uid'] != authService.getCurrentUser()?.uid) {
      return UserTile(
       text: userData['email'],
       onTap: () {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => ChatPage(receiverEmail: userData['email']),
+            builder: (context) => ChatPage(
+              receiverEmail: userData['email'],
+              receiverID: userData["uid"],
+              ),
           ),
         );
       },
