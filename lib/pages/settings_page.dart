@@ -29,12 +29,11 @@ class SettingsPage extends StatelessWidget {
             const Text("dark mode"),
             Consumer<ThemeProvider>(
               builder: (context, themeProvider, child) {
-                return GestureDetector(
-                  onTap: () => themeProvider.toggleTheme(),
-                  child: CupertinoSwitch(
-                    value: themeProvider.isDarkMode,
-                    onChanged: (_) {}, // ปิด gesture drag
-                  ),
+                return CupertinoSwitch(
+                  value: themeProvider.isDarkMode,
+                  onChanged: (value) {
+                    themeProvider.toggleTheme();
+                  },
                 );
               },
             ),
