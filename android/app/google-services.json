@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "929846223381",
-    "project_id": "yappingtime-66f94",
-    "storage_bucket": "yappingtime-66f94.firebasestorage.app"
+    "project_number": "1090571344443",
+    "project_id": "yappingtime-801a6",
+    "storage_bucket": "yappingtime-801a6.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:929846223381:android:7bc5e8827c54dd0b52641c",
+        "mobilesdk_app_id": "1:1090571344443:android:9c420b05e0102d14209a1e",
         "android_client_info": {
           "package_name": "com.example.yappingtime"
         }
@@ -15,7 +15,26 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCCxflhQly57QFphZ0eOzIQqEt6E8nJpbE"
+          "current_key": "AIzaSyCq89OuauGQwmhVUBXsad_fQ9-wxgzFJiY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1090571344443:android:4ab9d24be3220ef9209a1e",
+        "android_client_info": {
+          "package_name": "com.yappingtime"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCq89OuauGQwmhVUBXsad_fQ9-wxgzFJiY"
         }
       ],
       "services": {

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:yappingtime/themes/theme_provider.dart';
+import '../../../providers/theme_provider.dart';
 
-class ChatBubble extends StatelessWidget {
+class MessageBubbleWidget extends StatelessWidget {
   final String message;
   final bool isCurrentUser;
 
-  const ChatBubble({
+  const MessageBubbleWidget({
     super.key,
     required this.message,
     required this.isCurrentUser,
@@ -14,18 +14,15 @@ class ChatBubble extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isDarkMode = Provider.of<ThemeProvider>(
-      context,
-      listen: false,
-    ).isDarkMode;
+    bool isDarkMode = Provider.of<ThemeProvider>(context, listen: false).isDarkMode;
 
     return Container(
       decoration: BoxDecoration(
         color: isCurrentUser
             ? (isDarkMode ? Colors.green.shade600 : Colors.grey.shade500)
             : isDarkMode
-            ? Colors.green.shade800
-            : Colors.grey.shade200,
+                ? Colors.green.shade800
+                : Colors.grey.shade200,
         borderRadius: BorderRadius.circular(12),
       ),
       padding: const EdgeInsets.all(16),
@@ -35,7 +32,9 @@ class ChatBubble extends StatelessWidget {
         style: TextStyle(
           color: isCurrentUser
               ? Colors.white
-              : isDarkMode ? Colors.white : Colors.black,
+              : isDarkMode
+                  ? Colors.white
+                  : Colors.black,
         ),
       ),
     );

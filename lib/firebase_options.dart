@@ -41,48 +41,49 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCONU2irrhiVT_O8fQYDeMkcUuHXJ7AI_4',
-    appId: '1:929846223381:web:061e5bac426a333052641c',
-    messagingSenderId: '929846223381',
-    projectId: 'yappingtime-66f94',
-    authDomain: 'yappingtime-66f94.firebaseapp.com',
-    storageBucket: 'yappingtime-66f94.firebasestorage.app',
-    measurementId: 'G-0B1SRJSV85',
+    apiKey: 'AIzaSyBOmpcQ-iDJfvG5lxbFCqVmYhmB7B1bZx4',
+    appId: '1:1090571344443:web:32df06222eaf5e5d209a1e',
+    messagingSenderId: '1090571344443',
+    projectId: 'yappingtime-801a6',
+    authDomain: 'yappingtime-801a6.firebaseapp.com',
+    storageBucket: 'yappingtime-801a6.firebasestorage.app',
+    measurementId: 'G-F2HHXZZX9D',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCCxflhQly57QFphZ0eOzIQqEt6E8nJpbE',
-    appId: '1:929846223381:android:7bc5e8827c54dd0b52641c',
-    messagingSenderId: '929846223381',
-    projectId: 'yappingtime-66f94',
-    storageBucket: 'yappingtime-66f94.firebasestorage.app',
+    apiKey: 'AIzaSyCq89OuauGQwmhVUBXsad_fQ9-wxgzFJiY',
+    appId: '1:1090571344443:android:9c420b05e0102d14209a1e',
+    messagingSenderId: '1090571344443',
+    projectId: 'yappingtime-801a6',
+    storageBucket: 'yappingtime-801a6.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBU_ZRUjiJvE-IX8j3kejg40nK5Y51Fy1w',
-    appId: '1:929846223381:ios:1d6bcccf3038496d52641c',
-    messagingSenderId: '929846223381',
-    projectId: 'yappingtime-66f94',
-    storageBucket: 'yappingtime-66f94.firebasestorage.app',
+    apiKey: 'AIzaSyCFFuIj-8bW-2dkjIkuERR6u_N9xFzQvDI',
+    appId: '1:1090571344443:ios:f5445a92a62f9183209a1e',
+    messagingSenderId: '1090571344443',
+    projectId: 'yappingtime-801a6',
+    storageBucket: 'yappingtime-801a6.firebasestorage.app',
     iosBundleId: 'com.example.yappingtime',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyBU_ZRUjiJvE-IX8j3kejg40nK5Y51Fy1w',
-    appId: '1:929846223381:ios:1d6bcccf3038496d52641c',
-    messagingSenderId: '929846223381',
-    projectId: 'yappingtime-66f94',
-    storageBucket: 'yappingtime-66f94.firebasestorage.app',
+    apiKey: 'AIzaSyCFFuIj-8bW-2dkjIkuERR6u_N9xFzQvDI',
+    appId: '1:1090571344443:ios:f5445a92a62f9183209a1e',
+    messagingSenderId: '1090571344443',
+    projectId: 'yappingtime-801a6',
+    storageBucket: 'yappingtime-801a6.firebasestorage.app',
     iosBundleId: 'com.example.yappingtime',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyCONU2irrhiVT_O8fQYDeMkcUuHXJ7AI_4',
-    appId: '1:929846223381:web:96699ca04436471152641c',
-    messagingSenderId: '929846223381',
-    projectId: 'yappingtime-66f94',
-    authDomain: 'yappingtime-66f94.firebaseapp.com',
-    storageBucket: 'yappingtime-66f94.firebasestorage.app',
-    measurementId: 'G-2B9BSM5DEL',
+    apiKey: 'AIzaSyBOmpcQ-iDJfvG5lxbFCqVmYhmB7B1bZx4',
+    appId: '1:1090571344443:web:75d59c7b0d07c274209a1e',
+    messagingSenderId: '1090571344443',
+    projectId: 'yappingtime-801a6',
+    authDomain: 'yappingtime-801a6.firebaseapp.com',
+    storageBucket: 'yappingtime-801a6.firebasestorage.app',
+    measurementId: 'G-W64CD2H37F',
   );
+
 }
