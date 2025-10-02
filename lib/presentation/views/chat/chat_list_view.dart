@@ -84,18 +84,18 @@ class ChatListView extends StatelessWidget {
                       final chats = chatSnapshot.data?.docs ?? [];
                       final filteredChats = chats.where((doc) {
                         final data = doc.data() as Map<String, dynamic>;
-                        final chatType = data['chatType'] ?? 'personal';
+                        final chatType = (data['chatType'] ?? 'personal').toLowerCase();
 
                         if (viewModel.selectedCategory == AppConstants.categoryAll) {
                           return true;
-                        } else if (viewModel.selectedCategory == AppConstants.categoryPersonal) {
+                        } else if (viewModel.selectedCategory.toLowerCase() == AppConstants.categoryPersonal.toLowerCase()) {
                           return chatType == AppConstants.chatTypePersonal;
-                        } else if (viewModel.selectedCategory == AppConstants.categoryWork) {
+                        } else if (viewModel.selectedCategory.toLowerCase() == AppConstants.categoryWork.toLowerCase()) {
                           return chatType == AppConstants.chatTypeWork;
-                        } else if (viewModel.selectedCategory == AppConstants.categoryGroups) {
+                        } else if (viewModel.selectedCategory.toLowerCase() == AppConstants.categoryGroups.toLowerCase()) {
                           return chatType == AppConstants.chatTypeGroup;
                         }
-                        return true;
+                        return false;
                       }).toList();
 
                       if (filteredChats.isEmpty) {
@@ -413,18 +413,18 @@ class ChatListView extends StatelessWidget {
 
   Widget _buildMockUsersList(BuildContext context, ChatListViewModel viewModel) {
     final filteredMockUsers = mockUsers.where((user) {
-      final chatType = user['chatType'] ?? AppConstants.chatTypePersonal;
+      final chatType = (user['chatType'] ?? AppConstants.chatTypePersonal).toLowerCase();
 
       if (viewModel.selectedCategory == AppConstants.categoryAll) {
         return true;
-      } else if (viewModel.selectedCategory == AppConstants.categoryPersonal) {
+      } else if (viewModel.selectedCategory.toLowerCase() == AppConstants.categoryPersonal.toLowerCase()) {
         return chatType == AppConstants.chatTypePersonal;
-      } else if (viewModel.selectedCategory == AppConstants.categoryWork) {
+      } else if (viewModel.selectedCategory.toLowerCase() == AppConstants.categoryWork.toLowerCase()) {
         return chatType == AppConstants.chatTypeWork;
-      } else if (viewModel.selectedCategory == AppConstants.categoryGroups) {
+      } else if (viewModel.selectedCategory.toLowerCase() == AppConstants.categoryGroups.toLowerCase()) {
         return chatType == AppConstants.chatTypeGroup;
       }
-      return true;
+      return false;
     }).toList();
 
     if (filteredMockUsers.isEmpty) {

@@ -120,15 +120,16 @@ class ChatDetailView extends StatelessWidget {
                 }
 
                 return ListView.builder(
-                  reverse: true,
                   itemCount: messages.length,
                   itemBuilder: (context, index) {
                     final messageData = messages[index].data() as Map<String, dynamic>;
                     final isCurrentUser = messageData['senderID'] == currentUserID;
+                    final timestamp = messageData['timestamp'] as Timestamp?;
 
                     return MessageBubbleWidget(
                       message: messageData['message'] ?? '',
                       isCurrentUser: isCurrentUser,
+                      timestamp: timestamp,
                     );
                   },
                 );
@@ -179,6 +180,11 @@ class ChatDetailView extends StatelessWidget {
           'lastMessage': '',
           'timestamp': FieldValue.serverTimestamp(),
         });
+      } else if (chatCategory != null) {
+        // Update chat type (category)
+        await FirebaseFirestore.instance.collection('chats').doc(chatRoomID).update({
+          'chatType': chatCategory,
+        });
       }
     } catch (e) {
       print('Error ensuring chat room exists: $e');
@@ -187,16 +193,17 @@ class ChatDetailView extends StatelessWidget {
 
   Widget _buildMockMessagesList(String currentUserID) {
     return ListView.builder(
-      reverse: true,
       padding: const EdgeInsets.all(16),
       itemCount: mockMessages.length,
       itemBuilder: (context, index) {
-        final messageData = mockMessages[mockMessages.length - 1 - index];
+        final messageData = mockMessages[index];
         final isCurrentUser = messageData['senderID'] == 'current_user';
+        final timestamp = messageData['timestamp'] as Timestamp?;
 
         return MessageBubbleWidget(
           message: messageData['message'] ?? '',
           isCurrentUser: isCurrentUser,
+          timestamp: timestamp,
         );
       },
     );

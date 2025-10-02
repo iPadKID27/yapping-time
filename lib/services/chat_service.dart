@@ -37,13 +37,11 @@ class ChatService {
         .doc(chatRoomID)
         .collection(AppConstants.messagesCollection)
         .add(newMessage.toMap());
-  
-    await _firestore.collection(AppConstants.chatsCollection).doc(chatRoomID).set({
-      'participants': ids,
+
+    await _firestore.collection(AppConstants.chatsCollection).doc(chatRoomID).update({
       'lastMessage': message,
       'lastMessageTime': timestamp,
-      'chatType': AppConstants.chatTypePersonal,
-    }, SetOptions(merge: true));
+    });
     
   }
 
