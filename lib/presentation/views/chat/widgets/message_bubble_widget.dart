@@ -24,50 +24,56 @@ class MessageBubbleWidget extends StatelessWidget {
             .toLocal()
             .toString()
             .split(' ')[1]
-            .substring(0, 5) 
+            .substring(0, 5)
         : '';
 
-    return Container(
-      decoration: BoxDecoration(
-        color: isCurrentUser
-            ? (isDarkMode ? Colors.green.shade600 : Colors.grey.shade500)
-            : isDarkMode
-                ? Colors.green.shade800
-                : Colors.grey.shade200,
-        borderRadius: BorderRadius.circular(12),
-      ),
-      padding: const EdgeInsets.all(16),
-      margin: const EdgeInsets.symmetric(vertical: 5, horizontal: 25),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            message,
-            style: TextStyle(
-              color: isCurrentUser
-                  ? Colors.white
-                  : isDarkMode
-                      ? Colors.white
-                      : Colors.black,
-            ),
+    return Row(
+      mainAxisAlignment: isCurrentUser ? MainAxisAlignment.end : MainAxisAlignment.start,
+      children: [
+        Container(
+          constraints: const BoxConstraints(maxWidth: 250), 
+          decoration: BoxDecoration(
+            color: isCurrentUser
+                ? (isDarkMode ? Colors.green.shade600 : Colors.grey.shade500)
+                : isDarkMode
+                    ? Colors.green.shade800
+                    : Colors.grey.shade200,
+            borderRadius: BorderRadius.circular(12),
           ),
-          if (timeString.isNotEmpty)
-            Padding(
-              padding: const EdgeInsets.only(top: 4),
-              child: Text(
-                timeString,
+          padding: const EdgeInsets.all(16),
+          margin: const EdgeInsets.symmetric(vertical: 5, horizontal: 16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                message,
                 style: TextStyle(
-                  fontSize: 12,
                   color: isCurrentUser
-                      ? Colors.white70
+                      ? Colors.white
                       : isDarkMode
-                          ? Colors.white70
-                          : Colors.black54,
+                          ? Colors.white
+                          : Colors.black,
                 ),
               ),
-            ),
-        ],
-      ),
+              if (timeString.isNotEmpty)
+                Padding(
+                  padding: const EdgeInsets.only(top: 4),
+                  child: Text(
+                    timeString,
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: isCurrentUser
+                          ? Colors.white70
+                          : isDarkMode
+                              ? Colors.white70
+                              : Colors.black54,
+                    ),
+                  ),
+                ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }
